@@ -2,7 +2,7 @@ const express = require('express');
 const {AlgebraicCaptcha} = require('algebraic-captcha');
 var svgCaptcha = require('ppfun-captcha');
 const app = express();
-
+const port=process.env.PORT || 8080
 const algebraicCaptcha = new AlgebraicCaptcha({});
 app.get('/', async(req, res)=>{
     res.status(200).send()
@@ -26,4 +26,4 @@ app.get('/captcha/2', async (req, res) => {
     });
     });
  
-app.listen();
+app.listen(port);
