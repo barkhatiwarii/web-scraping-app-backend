@@ -6,7 +6,9 @@ const app = express();
 app.use(cors())
 
 const algebraicCaptcha = new AlgebraicCaptcha({});
-  
+app.get('/', async(req, res)=>{
+    res.status(200).send()
+})
 app.get('/captcha/1', async (req, res) => {
     const {image, answer} = await algebraicCaptcha.generateCaptcha();
     res.status(200).send({
