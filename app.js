@@ -1,9 +1,7 @@
 const express = require('express');
 const {AlgebraicCaptcha} = require('algebraic-captcha');
-var cors = require('cors')
 var svgCaptcha = require('ppfun-captcha');
 const app = express();
-app.use(cors())
 
 const algebraicCaptcha = new AlgebraicCaptcha({});
 app.get('/', async(req, res)=>{
