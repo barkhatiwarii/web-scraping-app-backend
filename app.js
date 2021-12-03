@@ -26,4 +26,4 @@ app.get('/captcha/2', async (req, res) => {
     });
     });
  
-app.listen(8080);
+app.listen();
