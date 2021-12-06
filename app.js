@@ -34,7 +34,7 @@ app.get("/captcha/3", async (req, res) => {
 app.get("/captcha/2", async (req, res) => {
   const { text, data } = svgCaptcha.create({
     width: 300,
-    height: 300,
+    height: 250,
   });
   res.status(200).send({
     image: data,
