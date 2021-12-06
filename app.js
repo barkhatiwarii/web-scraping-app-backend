@@ -18,19 +18,6 @@ app.get("/captcha/1", async (req, res) => {
   });
 });
 
-app.get("/captcha/3", async (req, res) => {
-  const { image, answer } = await algebraicCaptcha.generateCaptcha({
-    background: "#336699",
-    noise: 3,
-    operandAmount: 2,
-    operandTypes: ["+", "*", "-"],
-  });
-  res.status(200).send({
-    image: image,
-    answer: answer,
-  });
-});
-
 app.get("/captcha/2", async (req, res) => {
   const { text, data } = svgCaptcha.create({
     width: 300,
