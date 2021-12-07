@@ -1,9 +1,9 @@
 const express = require("express");
 const { AlgebraicCaptcha } = require("algebraic-captcha");
 var svgCaptcha = require("ppfun-captcha");
-const cors = require("cors");
+// const cors = require("cors");
 const app = express();
-app.use(cors());
+// app.use(cors());
 
 const port = process.env.PORT || 3000;
 const algebraicCaptcha = new AlgebraicCaptcha({});
